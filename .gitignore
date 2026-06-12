@@ -1,32 +1,71 @@
-# Prerequisites
-*.d
+# === Visual Studio ===
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.cache
+ipch/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
+# === Build folders (компилированные файлы) ===
+x64/
+x86/
+Win32/
+Debug/
+Release/
+build/
+out/
+
+# === Compiled files (скомпилированные объекты) ===
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
+*.o
 *.exe
-*.out
-*.app
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.exp
+*.map
+*.res
+*.aps
+
+# === Intermediate files (промежуточные файлы) ===
+*.idb
+*.iobj
+*.ipdb
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.pch
+*.sdf
+*.snc
+*.ncb
+*.opt
+*.plg
+
+# === User-specific files (пользовательские настройки) ===
+*.userprefs
+*.pidb
+*.log
+
+# === Visual Studio Code (если используешь) ===
+.vscode/
+*.code-workspace
+
+# === JetBrains CLion ===
+.idea/
+cmake-build-debug/
+cmake-build-release/
+
+# === OS files (системные файлы) ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Backup files ===
+*.bak
+*~
+*.swp
