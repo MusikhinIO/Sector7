@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\items">
+      <UniqueIdentifier>{c0f66009-cb7b-413f-bd57-15ab0498d88d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\entities">
+      <UniqueIdentifier>{b31827f7-98df-400b-b3dc-c782bb4570f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\world">
+      <UniqueIdentifier>{dce7031d-a60b-4a0c-ab1b-3d98821bb94f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\player">
+      <UniqueIdentifier>{c5e18afe-3736-4628-9f34-d080dfc1c8ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\core">
+      <UniqueIdentifier>{58cb455c-f4e9-43de-9f23-f781a690d889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\systems">
+      <UniqueIdentifier>{50bdddd9-5364-41fa-8681-84fce27e8fb2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="entities\enemy.h">
+      <Filter>Resource Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="items\item.h">
+      <Filter>Resource Files\items</Filter>
+    </ClInclude>
+    <ClInclude Include="player\player.h">
+      <Filter>Resource Files\player</Filter>
+    </ClInclude>
+    <ClInclude Include="world\room.h">
+      <Filter>Resource Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="core\parser.h">
+      <Filter>Resource Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\game.h">
+      <Filter>Resource Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\text_manager.h">
+      <Filter>Resource Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\combat_system.h">
+      <Filter>Resource Files\systems</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="entities\enemy.cpp">
+      <Filter>Resource Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="items\item.cpp">
+      <Filter>Resource Files\items</Filter>
+    </ClCompile>
+    <ClCompile Include="player\player.cpp">
+      <Filter>Resource Files\player</Filter>
+    </ClCompile>
+    <ClCompile Include="world\room.cpp">
+      <Filter>Resource Files\world</Filter>
+    </ClCompile>
+    <ClCompile Include="core\parser.cpp">
+      <Filter>Resource Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\game.cpp">
+      <Filter>Resource Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\main.cpp">
+      <Filter>Resource Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\text_manager.cpp">
+      <Filter>Resource Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\combat_system.cpp">
+      <Filter>Resource Files\systems</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\items.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="data\enemies.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="data\rooms.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="data\strings.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -50,22 +50,3 @@ out/
 *.userprefs
 *.pidb
 *.log
-
-# === Visual Studio Code (если используешь) ===
-.vscode/
-*.code-workspace
-
-# === JetBrains CLion ===
-.idea/
-cmake-build-debug/
-cmake-build-release/
-
-# === OS files (системные файлы) ===
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# === Backup files ===
-*.bak
-*~
-*.swp
