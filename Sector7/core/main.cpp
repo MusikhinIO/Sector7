@@ -10,7 +10,7 @@ int main() {
   std::srand(static_cast<unsigned int>(std::time(nullptr)));
 
   std::cout << "========================================\n";
-  std::cout << "       PROTOCOL: DERELICT v1.0        \n";
+  std::cout << "                Sector7                 \n";
   std::cout << "========================================\n\n";
 
   Game game;

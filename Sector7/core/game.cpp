@@ -5,12 +5,12 @@
 Game::Game() : is_running_(false), current_room_id_("") {}
 
 bool Game::Initialize() {
-  std::cout << TextManager::Get("SYS_INIT") << "\n";
-
   TextManager::LoadStrings("data/strings.txt");
   if (!Parser::ParseItems("data/items.txt", items_)) return false;
   if (!Parser::ParseEnemies("data/enemies.txt", enemies_)) return false;
   if (!Parser::ParseRooms("data/rooms.txt", rooms_)) return false;
+
+  std::cout << TextManager::Get("SYS_INIT") << "\n";
 
   const std::string kStartRoomId = "R01";
   bool start_room_found = false;

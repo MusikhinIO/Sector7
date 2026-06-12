@@ -14,7 +14,7 @@ class CombatSystem {
   static void ProcessEnemyTurn(Player& player, Enemy* enemy);
 
  private:
-  static constexpr float kDefendDamageReduction = 0.4;
+  static constexpr double kDefendDamageReduction = 0.4;
   static constexpr int kDefendHealValue = 5;
   static constexpr int kChargeDamageMultiplier = 3;
 };

@@ -32,6 +32,5 @@ std::string TextManager::Get(const std::string& key) {
   if (it != strings_.end()) {
     return it->second;
   }
-  // Защита от опечаток в коде: если ключа нет, увидим это в консоли
   return "MISSING_STRING: " + key;
 }
