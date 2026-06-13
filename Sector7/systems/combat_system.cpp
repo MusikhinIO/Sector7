@@ -12,9 +12,12 @@ void CombatSystem::ResolveAttack(Player& player, Enemy* enemy, Room* room) {
   if (player.IsCharging()) {
     player_dmg *= kChargeDamageMultiplier;
     enemy->AddStunTurns(1);
+
     std::cout << TextManager::Get("CHARGED_ATTACK_PREFIX") << player_dmg
               << TextManager::Get("CHARGED_ATTACK_SUFFIX") << "\n";
+
     player.SetCharging(false);
+
   } else {
     std::cout << TextManager::Get("ATTACK_PREFIX") << player_dmg
               << TextManager::Get("ATTACK_SUFFIX") << "\n";
@@ -52,15 +55,18 @@ void CombatSystem::ResolveInteract(Player& player, Enemy* enemy, Room* room) {
   if (room->EnvAction() == "CABINET") {
     std::cout << TextManager::Get("USE_CABINET_MSG") << "\n";
     enemy->SetHp(enemy->Hp() - 40);
+
   } else if (room->EnvAction() == "VENT") {
     std::cout << TextManager::Get("USE_VENT_MSG") << "\n";
     player.SetDefending(true);
     return;
+
   } else if (room->EnvAction() == "STEAM") {
     std::cout << TextManager::Get("USE_STEAM_MSG") << "\n";
     enemy->SetHp(enemy->Hp() - 20);
     enemy->AddStunTurns(2);
     return;
+
   } else if (room->EnvAction() == "CABLE") {
     std::cout << TextManager::Get("USE_CABLE_MSG") << "\n";
     enemy->SetHp(enemy->Hp() - 25);
@@ -88,17 +94,21 @@ void CombatSystem::ProcessEnemyTurn(Player& player, Enemy* enemy) {
 
   if (player.IsDefending()) {
     int reduced_dmg = static_cast<int>(enemy_dmg * kDefendDamageReduction);
+
     std::cout << TextManager::Get("DEFEND_PREFIX") << reduced_dmg
               << TextManager::Get("ATTACK_SUFFIX") << "\n";
+
     player.SetHp(player.Hp() - reduced_dmg);
 
     int heal = kDefendHealValue;
-    if (player.Hp() + heal > player.MaxHp())
+    if (player.Hp() + heal > player.MaxHp()) {
       heal = player.MaxHp() - player.Hp();
+    }
+
     player.SetHp(player.Hp() + heal);
     std::cout << TextManager::Get("DEFEND_HEALING") << heal << " HP.\n";
-
     player.SetDefending(false);
+
   } else {
     std::cout << enemy->Name() << TextManager::Get("ENENY_ATTACK") << enemy_dmg
               << TextManager::Get("ATTACK_SUFFIX") << "\n";

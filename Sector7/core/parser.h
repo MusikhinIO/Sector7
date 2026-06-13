@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 
-// классы данных
 #include "../entities/enemy.h"
 #include "../items/item.h"
 #include "../world/room.h"

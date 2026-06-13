@@ -17,21 +17,3 @@ Player::Player(const std::string& name, int hp, int damage)
       is_charging_(false) {}
 
 void Player::AddItem(const Item& item) { inventory_.push_back(item); }
-
-bool Player::HasItemOfType(const std::string& type) const {
-  for (size_t i = 0; i < inventory_.size(); ++i) {
-    if (inventory_[i].Type() == type) {
-      return true;
-    }
-  }
-  return false;
-}
-
-void Player::RemoveItemOfType(const std::string& type) {
-  for (size_t i = 0; i < inventory_.size(); ++i) {
-    if (inventory_[i].Type() == type) {
-      inventory_.erase(inventory_.begin() + i);
-      return;
-    }
-  }
-}

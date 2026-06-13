@@ -24,15 +24,10 @@ class Player {
   bool IsCharging() const { return is_charging_; }
   void SetCharging(bool charging) { is_charging_ = charging; }
 
-  // система управления инвентарём
-  void AddItem(const Item& item);
-  bool HasItemOfType(
-      const std::string& type) const;  // проверка на наличие предмета
-  void RemoveItemOfType(const std::string& type);  // использование предмета
-
-  // показать инвентарь
+  // инвентарь
   std::vector<Item>& Inventory() { return inventory_; }
   const std::vector<Item>& Inventory() const { return inventory_; }
+  void AddItem(const Item& item);
 
  private:
   std::string name_;
